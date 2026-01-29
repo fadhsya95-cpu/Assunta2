@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="ms">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Organisasi Guru Penasihat</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        h1, h2, .title-font {
+            font-family: 'Fredoka One', cursive;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 8mm;
+        }
+
+        .a4-container {
+            width: 297mm;
+            height: 210mm;
+            max-width: 297mm;
+            margin: 0 auto;
+            padding: 6mm;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ffecd2 100%);
+            box-sizing: border-box;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .a4-container::before {
+            content: '⭐';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 1.5rem;
+            opacity: 0.3;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .a4-container::after {
+            content: '✨';
+            position: absolute;
+            bottom: 15%;
+            right: 8%;
+            font-size: 1.2rem;
+            opacity: 0.3;
+            animation: twinkle 3s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+
+        .header-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            border: 3px solid #1a1a2e;
+            box-shadow: 6px 6px 0px #4ecdc4, 8px 8px 0px #1a1a2e;
+            padding: 6px 12px;
+            margin-bottom: 6px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: shimmer 20s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+        }
+
+        .club-card {
+            background: white;
+            border: 3px solid #1a1a2e;
+            box-shadow: 5px 5px 0px #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            height: fit-content;
+            animation: fadeInUp 0.6s ease-out backwards;
+            position: relative;
+        }
+
+        .club-card:hover {
+            transform: translate(-3px, -3px) rotate(-1deg) scale(1.02);
+            box-shadow: 8px 8px 0px #1a1a2e, 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .club-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .club-card:hover::before {
+            left: 100%;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .club-card:nth-child(1) { animation-delay: 0.1s; }
+        .club-card:nth-child(2) { animation-delay: 0.2s; }
+        .club-card:nth-child(3) { animation-delay: 0.3s; }
+        .club-card:nth-child(4) { animation-delay: 0.4s; }
+        .club-card:nth-child(5) { animation-delay: 0.5s; }
+        .club-card:nth-child(6) { animation-delay: 0.6s; }
+        .club-card:nth-child(7) { animation-delay: 0.7s; }
+
+        .card-header {
+            border-bottom: 3px solid #1a1a2e;
+            padding: 8px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+        }
+
+        .card-body {
+            padding: 6px 8px;
+            background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+        }
+
+        .list-names {
+            font-size: 0.6rem;
+            line-height: 1.25;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .list-names li {
+            padding: 2px 0;
+            border-bottom: 1px dashed #e5e7eb;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .list-names li:hover {
+            padding-left: 4px;
+            color: #1a1a2e;
+            font-weight: 700;
+            background: linear-gradient(90deg, rgba(255,215,0,0.2) 0%, transparent 100%);
+        }
+
+        .list-names li:last-child {
+            border-bottom: none;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 50px;
+            border: 2px solid #1a1a2e;
+            font-weight: 700;
+            font-size: 0.7rem;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .badge:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .ketua-badge {
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 8px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .emoji-icon {
+            font-size: 1.2rem;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-5px) scale(1.1); }
+        }
+
+        .club-card:hover .emoji-icon {
+            animation: spin 0.6s ease-in-out;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        /* Menu Styles */
+        .menu-card {
+            border: 4px solid #1a1a2e;
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 6px 6px 0px #1a1a2e;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 10px 10px 0px #1a1a2e;
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .menu-card:hover::before {
+            left: 100%;
+        }
+
+        .menu-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .menu-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .menu-desc {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 600;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: white;
+            border: 3px solid #1a1a2e;
+            padding: 8px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 4px 4px 0px #1a1a2e;
+            transition: all 0.2s ease;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #1a1a2e;
+        }
+
+        .back-button:active {
+            transform: translate(0, 0);
+            box-shadow: 2px 2px 0px #1a1a2e;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            .no-print { display: none; }
+            body { 
+                background: white !important;
+            }
+            .a4-container { 
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ffecd2 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .header-box { 
+                box-shadow: 6px 6px 0px #4ecdc4 !important; 
+                border-width: 3px !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .club-card { 
+                box-shadow: 4px 4px 0px #1a1a2e !important; 
+                border-width: 2px !important;
+                page-break-inside: avoid;
+            }
+            .card-header {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .ketua-badge {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .badge {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body><!-- Menu Utama -->
+  <div id="main-menu" class="a4-container flex items-center justify-center">
+   <div class="text-center">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8 drop-shadow-lg" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.1);">🎓 SISTEM KOKURIKULUM 🎓</h1>
+    <p class="text-lg text-gray-700 mb-12 font-semibold" id="menu-school-name">SK ASSUNTA (2) - TAHUN 2026</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"><!-- Unit Uniform --> <button onclick="showSection('uniform')" class="menu-card bg-gradient-to-br from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700">
+      <div class="menu-icon">
+       🎖️
+      </div><h2 class="menu-title">Unit Uniform</h2><p class="menu-desc">Pengakap, PBSM, Kadet</p></button> <!-- Kelab & Persatuan --> <button onclick="showSection('kelab')" class="menu-card bg-gradient-to-br from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700">
+      <div class="menu-icon">
+       🎭
+      </div><h2 class="menu-title">Kelab &amp; Persatuan</h2><p class="menu-desc">Bahasa, Seni, Sains</p></button> <!-- Sukan & Permainan --> <button onclick="showSection('sukan')" class="menu-card bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700">
+      <div class="menu-icon">
+       ⚽
+      </div><h2 class="menu-title">Sukan &amp; Permainan</h2><p class="menu-desc">Bola Sepak, Bola Jaring</p></button>
+	  <!-- Sukan & Permainan --> <button onclick="window.location.href='https://fadhsya95-cpu.github.io/Assunta2/takwim6.html'" class="menu-card bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700">
+      <div class="menu-icon">
+       ⚽
+      </div><h2 class="menu-title">Test &amp; Takwim</h2><p class="menu-desc">Takwim</p></button>
+	  
+	  <!-- Sukan & Permainan --> <button onclick="window.location.href='https://fadhsya95-cpu.github.io/Assunta2/IndukKo.html'" class="menu-card bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700">
+      <div class="menu-icon">
+       ⚽
+      </div><h2 class="menu-title">Carta &amp; Test</h2><p class="menu-desc">Carta organisasi</p></button>
+	  
+    </div>
+   </div>
+  </div><!-- Carta Kelab & Persatuan -->
+  <div id="kelab-section" class="a4-container" style="display: none;"><!-- Back Button --> <button onclick="showSection('menu')" class="back-button"> ← Kembali ke Menu </button> <!-- Header -->
+   <header class="header-box text-white text-center relative z-10">
+    <h1 id="main-title" class="text-xl tracking-wider uppercase mb-2 drop-shadow-lg" style="text-shadow: 3px 3px 0px rgba(0,0,0,0.3);">🎓 GURU PENASIHAT KELAB &amp; PERSATUAN 🎓</h1>
+    <div class="flex justify-center gap-2 flex-wrap"><span id="year-badge" class="badge bg-yellow-300 text-gray-900"> 📅 TAHUN 2026 </span> <span id="school-badge" class="badge bg-white text-gray-900"> 🏫 SK ASSUNTA (2) </span>
+    </div>
+   </header><!-- Grid untuk Kelab -->
+   <div class="grid-layout"><!-- BAHASA MELAYU -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-cyan-300 to-cyan-400"><span class="emoji-icon">📚</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">Bahasa Melayu</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-cyan-500 text-white mb-2">
+       👑 Ketua: Maisyarah Latif
+      </div>
+      <ul class="list-names">
+       <li>• Nur Sakinah Abdul Rauf</li>
+       <li>• Wan Norshahira Fatin</li>
+       <li>• Rini binti Rosmin</li>
+       <li>• Nor Izzah Salmi Soppy</li>
+       <li>• Ummi Shafa Fashihah</li>
+       <li>• Noorsyazwani Saadil</li>
+       <li>• Nurul Ain Mohd Azmi</li>
+       <li>• Naqibah Mohd Nasir</li>
+       <li>• Nurul Izzah Azizan</li>
+      </ul>
+     </div>
+    </div><!-- BAHASA INGGERIS -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-purple-300 to-purple-400"><span class="emoji-icon">🌍</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">Bahasa Inggeris</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-purple-500 text-white mb-2">
+       👑 Ketua: Siti Aisyah Md Zin
+      </div>
+      <ul class="list-names">
+       <li>• Priyaa a/p Subramaniam</li>
+       <li>• Harvinder Kaur a/p Jeswan Singh</li>
+       <li>• Nur Aniesha Suehanis Azmi</li>
+       <li>• Sumathy a/p Arumugam</li>
+       <li>• Nur Aida Nabila Khairul Azli</li>
+       <li>• Logambigai a/p Kandasamy</li>
+       <li>• Ain Farina Azman</li>
+       <li>• Mercy Linda a/p Joseph</li>
+      </ul>
+     </div>
+    </div><!-- SENI TEATER -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-pink-300 to-pink-400"><span class="emoji-icon">🎭</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">Seni Teater</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-pink-500 text-white mb-2">
+       👑 Ketua: Vimala a/p Thachanamurthy
+      </div>
+      <ul class="list-names">
+       <li>• Syasya Fakhira Rosdi</li>
+       <li>• Devii a/p Ravintaran</li>
+       <li>• Nuruljannah Mohd Mazuki</li>
+       <li>• Damia Nazurah Samsudin</li>
+       <li>• Pavitra a/p Muruga</li>
+       <li>• Aizatul Shairah Mat Nasir</li>
+       <li>• Nur Ain Najwa Ramlee</li>
+      </ul>
+     </div>
+    </div><!-- PENCEGAHAN JENAYAH (KPJ) -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-orange-300 to-orange-400"><span class="emoji-icon">🚨</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">Pencegahan Jenayah</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-orange-500 text-white mb-2">
+       👑 Ketua: Vickneswari a/p Vadivelloo
+      </div>
+      <ul class="list-names">
+       <li>• Yuzaini Azura Mat Jusoh</li>
+       <li>• Annisa Saffieyya Abd Shukor</li>
+       <li>• Nurun Syazwani Md Radzi</li>
+       <li>• Waraslina Abdul Wahab</li>
+       <li>• Shalini a/p Mogan</li>
+       <li>• Lailatul Qadarina Mohd Rozikin</li>
+       <li>• Nur Atikah Abdul Rahman</li>
+       <li>• Khairul Najwa Mohd Zamgi</li>
+      </ul>
+     </div>
+    </div><!-- PERSATUAN AGAMA ISLAM -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-emerald-300 to-emerald-400"><span class="emoji-icon">🕌</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">Persatuan Agama Islam</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-emerald-600 text-white mb-2">
+       👑 Ketua: Siti Aliza Aripin
+      </div>
+      <ul class="list-names">
+       <li>• Nurul Ubaidah Md Samsudin</li>
+       <li>• Hamizah Munir Aziz</li>
+       <li>• Nik Fatimah Nadhirah Nik Idris</li>
+       <li>• Raja Nur Nazihah Raja Abdul Rohalim</li>
+       <li>• Nur Dini Nasrihah Che Hussin</li>
+       <li>• Nor Diyana Ashikin Saifuddin</li>
+       <li>• Zamaleah Mat Som</li>
+       <li>• Norafiza Karullzaman</li>
+       <li>• Nur Amanina Mahmod</li>
+      </ul>
+     </div>
+    </div><!-- STEM -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-blue-300 to-blue-400"><span class="emoji-icon">🔬</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">STEM</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-blue-500 text-white mb-2">
+       👑 Ketua: Mariam Omar
+      </div>
+      <ul class="list-names">
+       <li>• Vanajadevi a/p Govindasamy</li>
+       <li>• Ravina a/p Thivarah</li>
+       <li>• Sapinah Abdullah</li>
+       <li>• Sharifah Izzati Syed Zainol</li>
+       <li>• Kalai Selvi a/p Venggadasallam</li>
+       <li>• Asmaa' Ahmad</li>
+       <li>• Sujatha a/p Ramasamy</li>
+       <li>• Hayati Abu Bakar</li>
+      </ul>
+     </div>
+    </div><!-- DOKTOR MUDA -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-r from-red-300 to-red-400"><span class="emoji-icon">⚕️</span>
+      <h2 class="text-xs uppercase font-bold text-gray-800">Doktor Muda</h2>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-red-500 text-white mb-2">
+       👑 Ketua: Asmidar Ahmad
+      </div>
+      <ul class="list-names">
+       <li>• Darshini a/p Mani</li>
+       <li>• Magdeline a/p R.O. Raju</li>
+       <li>• Aisyah Ahmadi</li>
+       <li>• Siti Fatimah Mohtar</li>
+       <li>• Siti Norisah Mad Dom</li>
+       <li>• Siti Arina Abdul Musa</li>
+       <li>• Amirah Najihah Abdul Alim</li>
+       <li>• Maisyarah Latif</li>
+       <li>• Nor Aida Sukran Jamil</li>
+      </ul>
+     </div>
+    </div>
+   </div><!-- Footer -->
+   <footer class="text-center mt-2 py-1">
+    <p class="text-xs text-gray-600 font-semibold">✨ "Bersama Membentuk Generasi Cemerlang" ✨</p>
+   </footer>
+  </div><!-- Unit Uniform Section -->
+  <div id="uniform-section" class="a4-container" style="display: none;"><!-- Back Button --> <button onclick="showSection('menu')" class="back-button"> ← Kembali ke Menu </button> <!-- Header -->
+   <header class="header-box text-white text-center relative z-10">
+    <h1 class="text-lg tracking-wider uppercase mb-1 drop-shadow-lg" style="text-shadow: 3px 3px 0px rgba(0,0,0,0.3);">🎖️ GURU PENASIHAT UNIT UNIFORM 🎖️</h1>
+    <div class="flex justify-center gap-2 flex-wrap"><span id="year-badge-uniform" class="badge bg-yellow-300 text-gray-900"> 📅 TAHUN 2026 </span> <span id="school-badge-uniform" class="badge bg-white text-gray-900"> 🏫 SK ASSUNTA (2) </span>
+    </div>
+   </header><!-- Grid untuk Unit Uniform (2 columns layout) -->
+   <div class="grid grid-cols-2 gap-3"><!-- TKRS -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600">
+      <div class="flex items-center justify-center gap-3"><span class="emoji-icon text-3xl">🪖</span>
+       <h2 class="text-sm uppercase font-bold text-white">Tunas Kadet Remaja Sekolah</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-blue-600 text-white mb-2 text-center">
+       👑 Ketua: Sharifah Izzati Syed Zainol
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Aisyah Ahmadi</li>
+       <li>• Sapinah Abdullah</li>
+       <li>• Syasya Fakhira Rosdi</li>
+       <li>• Vanajadevi a/p Govindasamy</li>
+       <li>• Nur Aniesha Suehanis Azmi</li>
+       <li>• Shalini a/p Mogan</li>
+       <li>• Nurul Ain Mohd Azmi</li>
+       <li>• Khairul Najwa Mohamad Zamgi</li>
+       <li>• Asmidar Ahmad</li>
+       <li>• Siti Aishah Md Zin</li>
+      </ul>
+     </div>
+    </div><!-- PPIM -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600">
+      <div class="flex items-center justify-center gap-3"><span class="emoji-icon text-3xl">🧕</span>
+       <h2 class="text-sm uppercase font-bold text-white">Persatuan Puteri Islam Malaysia</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-teal-600 text-white mb-2 text-center">
+       👑 Ketua: Nik Fatimah Nadhirah Nik Idris
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Siti Aliza Aripin</li>
+       <li>• Hamizah Aziz Munir</li>
+       <li>• Nurul Ubaidah Md Samsudin</li>
+       <li>• Siti Fatimah Mohtar</li>
+       <li>• Wan Norshahira Fatin</li>
+       <li>• Hayati Abu Bakar</li>
+       <li>• Nor Diyana Ashikin Saifuddin</li>
+       <li>• Norafiza Karullzaman</li>
+       <li>• Norsyazwani Mohamed Isa</li>
+      </ul>
+     </div>
+    </div><!-- TUSPA -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600">
+      <div class="flex items-center justify-center gap-3"><span class="emoji-icon text-3xl">🚨</span>
+       <h2 class="text-sm uppercase font-bold text-white">Tunas Pertahanan Awam</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-orange-600 text-white mb-2 text-center">
+       👑 Ketua: Nur Aida Nabila Khairul Azli
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Vickneswari a/p Vadivelloo</li>
+       <li>• Dharsini a/p Mani</li>
+       <li>• Nor Izzah Salmi Soppy</li>
+       <li>• Ravina a/p Thivarah</li>
+       <li>• Yuzaini Azura Mat Jusoh</li>
+       <li>• Nur Amanina Mahmud</li>
+       <li>• Nor Aida Sukran Jamil</li>
+       <li>• Mercy Linda a/p Joseph</li>
+       <li>• Nurul Izzah Azizan</li>
+       <li>• Siti Arina Abdul Musa</li>
+      </ul>
+     </div>
+    </div><!-- PENGAKAP -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-green-400 via-green-500 to-green-600">
+      <div class="flex items-center justify-center gap-3"><span class="emoji-icon text-3xl">⛺</span>
+       <h2 class="text-sm uppercase font-bold text-white">Pengakap</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-green-600 text-white mb-2 text-center">
+       👑 Ketua: Waraslina Abdul Wahab
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Sumathy a/p Arumugam</li>
+       <li>• Ummi Shafa Fashihah Sairi</li>
+       <li>• Devii a/p Ravintaran</li>
+       <li>• Vimala a/p Thachanamurthy</li>
+       <li>• Raja Nur Nazihah Raja Abdul Rohalim</li>
+       <li>• Ain Farina Azman</li>
+       <li>• Asmaa' Ahmad</li>
+       <li>• Lailatul Qadarina Rozikin</li>
+       <li>• Noorsyazwani Saadil</li>
+       <li>• Nur Ain Najwa Ramlee</li>
+       <li>• Nur Atikah Abdul Rahman</li>
+      </ul>
+     </div>
+    </div><!-- PPT -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600">
+      <div class="flex items-center justify-center gap-3"><span class="emoji-icon text-3xl">🎀</span>
+       <h2 class="text-sm uppercase font-bold text-white">Pandu Puteri Tunas</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-purple-600 text-white mb-2 text-center">
+       👑 Ketua: Sujatha a/p Ramasamy
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Rini binti Rosmin</li>
+       <li>• Nuruljannah Mohd Mazuki</li>
+       <li>• Priyaa a/p Subramaniam</li>
+       <li>• Harvinder Kaur a/p Jeswan Singh</li>
+       <li>• Damia Nazurah Samsudin</li>
+       <li>• Nur Sakinah Abdul Rauf</li>
+       <li>• Maisyarah Latif</li>
+       <li>• Mariam Omar</li>
+       <li>• Naqibah Mohd Nasir</li>
+      </ul>
+     </div>
+    </div><!-- PBSM -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-red-400 via-red-500 to-red-600">
+      <div class="flex items-center justify-center gap-3"><span class="emoji-icon text-3xl">🩹</span>
+       <h2 class="text-sm uppercase font-bold text-white">Persatuan Bulan Sabit Merah</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-red-600 text-white mb-2 text-center">
+       👑 Ketua: Pavitra a/p Muruga
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Nurun Syazwani Md Radzi</li>
+       <li>• Kalai Selvi a/p Venggadasallam</li>
+       <li>• Magdeline a/p R.O. Raju</li>
+       <li>• Siti Norisah Mad Dom</li>
+       <li>• Annisa Saffieyya Abdul Shukor</li>
+       <li>• Nur Dini Nasrihah Che Hussin</li>
+       <li>• Logambigai a/p Kandasamy</li>
+       <li>• Amirah Najihah Abdul Alim</li>
+       <li>• Aizatul Shairah Mat Nasir</li>
+       <li>• Zamaleah Mat Som</li>
+      </ul>
+     </div>
+    </div>
+   </div><!-- Footer -->
+   <footer class="text-center mt-1 py-0.5">
+    <p class="text-xs text-gray-600 font-semibold">✨ "Disiplin, Tanggungjawab &amp; Kepimpinan" ✨</p>
+   </footer>
+  </div>
+  <div id="sukan-section" class="a4-container" style="display: none;"><!-- Back Button --> <button onclick="showSection('menu')" class="back-button"> ← Kembali ke Menu </button> <!-- Header -->
+   <header class="header-box text-white text-center relative z-10">
+    <h1 class="text-lg tracking-wider uppercase mb-1 drop-shadow-lg" style="text-shadow: 3px 3px 0px rgba(0,0,0,0.3);">⚽ GURU PENASIHAT SUKAN &amp; PERMAINAN ⚽</h1>
+    <div class="flex justify-center gap-2 flex-wrap"><span id="year-badge-sukan" class="badge bg-yellow-300 text-gray-900"> 📅 TAHUN 2026 </span> <span id="school-badge-sukan" class="badge bg-white text-gray-900"> 🏫 SK ASSUNTA (2) </span>
+    </div>
+   </header><!-- Grid untuk Sukan (2 columns for better spacing) -->
+   <div class="grid grid-cols-2 gap-3"><!-- BOLA TAMPAR -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600">
+      <div class="flex items-center justify-center gap-2"><span class="emoji-icon text-2xl">🏐</span>
+       <h2 class="text-sm uppercase font-bold text-white">Bola Tampar</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-amber-600 text-white mb-2 text-center">
+       👑 Ketua: Siti Arina Abdul Musa
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Nurul Ubaidah Md Samsudin</li>
+       <li>• Waraslina Abdul Wahab</li>
+       <li>• Raja Nur Nazihah Raja Abdul Rohalim</li>
+       <li>• Rini Rosmin</li>
+       <li>• Nurun Syazwani Md Radzi</li>
+       <li>• Wan Norshahira Fatin</li>
+       <li>• Nur Aida Nabila Khairul Azli</li>
+       <li>• Siti Aishah Md Zin</li>
+       <li>• Norafiza Karullzaman</li>
+       <li>• Norsyazwani Saadil</li>
+       <li>• Nor Aida Sukran Jamil</li>
+       <li>• Sujatha a/p Ramasamy</li>
+      </ul>
+     </div>
+    </div><!-- BOLA JARING -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600">
+      <div class="flex items-center justify-center gap-2"><span class="emoji-icon text-2xl">🏀</span>
+       <h2 class="text-sm uppercase font-bold text-white">Bola Jaring</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-pink-600 text-white mb-2 text-center">
+       👑 Ketua: Nur Dini Nasrihah Che Hussin
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Sumathy a/p Arumugam</li>
+       <li>• Nur Aniesha Suehanis Azmi</li>
+       <li>• Damia Nazurah Samsudin</li>
+       <li>• Nor Izzah Salmi Soppy</li>
+       <li>• Ummi Shafa Fasihah Sairi</li>
+       <li>• Annisa Saffieyya Abd Shukor</li>
+       <li>• Mariam Omar</li>
+       <li>• Ain Farina Azman</li>
+       <li>• Pavithra a/p Muruga</li>
+       <li>• Asmaa' Ahmad</li>
+       <li>• Nur Ain Najwa Ramlee</li>
+      </ul>
+     </div>
+    </div><!-- CATUR -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-slate-400 via-slate-500 to-slate-600">
+      <div class="flex items-center justify-center gap-2"><span class="emoji-icon text-2xl">♟️</span>
+       <h2 class="text-sm uppercase font-bold text-white">Catur</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-slate-600 text-white mb-2 text-center">
+       👑 Ketua: Siti Fatimah Mohtar
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Priyaa a/p Subramaniam</li>
+       <li>• Hamizah Aziz Munir</li>
+       <li>• Aisyah Ahmadi</li>
+       <li>• Yuzaini Azura Mat Jusoh</li>
+       <li>• Vimala a/p Thachanamurthy</li>
+       <li>• Sharifah Izzati Syed Zainol</li>
+       <li>• Maisyarah Latif</li>
+       <li>• Logambigai a/p Kandasamy</li>
+       <li>• Nur Atikah Abdul Rahman</li>
+       <li>• Hayati Abu Bakar</li>
+       <li>• Nur Amanina Mahmud</li>
+      </ul>
+     </div>
+    </div><!-- BADMINTON -->
+    <div class="club-card">
+     <div class="card-header bg-gradient-to-br from-lime-400 via-lime-500 to-lime-600">
+      <div class="flex items-center justify-center gap-2"><span class="emoji-icon text-2xl">🏸</span>
+       <h2 class="text-sm uppercase font-bold text-white">Badminton</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-lime-600 text-white mb-2 text-center">
+       👑 Ketua: Khairul Najwa Mohamad Zamgi
+      </div>
+      <ul class="list-names grid grid-cols-2 gap-x-3">
+       <li>• Siti Aliza Aripin</li>
+       <li>• Devii a/p Ravintaran</li>
+       <li>• Nuruljannah Mohd Mazuki</li>
+       <li>• Vanajadevi a/p Govindasamy</li>
+       <li>• Nur Sakinah Abu Rauf</li>
+       <li>• Darshini a/p Mani</li>
+       <li>• Magdeline a/p R.O. Raju</li>
+       <li>• Nurul Izzah Azizan</li>
+       <li>• Zameleah Mat Som</li>
+       <li>• Mercy Linda a/p Joseph</li>
+       <li>• Nurul Ain Mohd Azmi</li>
+       <li>• Norsyazwani Mohamed Isa</li>
+      </ul>
+     </div>
+    </div><!-- OLAHRAGA (spanning 2 columns for better layout) -->
+    <div class="club-card col-span-2">
+     <div class="card-header bg-gradient-to-br from-indigo-400 via-indigo-500 to-indigo-600">
+      <div class="flex items-center justify-center gap-2"><span class="emoji-icon text-2xl">🏃</span>
+       <h2 class="text-sm uppercase font-bold text-white">Olahraga</h2>
+      </div>
+     </div>
+     <div class="card-body">
+      <div class="ketua-badge bg-indigo-600 text-white mb-2 text-center">
+       👑 Ketua: Shalini a/p Mogan
+      </div>
+      <ul class="list-names grid grid-cols-4 gap-x-3">
+       <li>• Vickneswari a/p Vadivelloo</li>
+       <li>• Siti Norisah Mat Dom</li>
+       <li>• Syasya Fakirah Rosdi</li>
+       <li>• Harvinder Kaur a/p Jeswan Singh</li>
+       <li>• Nik Fatimah Nadhirah Nik Idris</li>
+       <li>• Sapinah Abdullah</li>
+       <li>• Asmidar Ahmad</li>
+       <li>• Nor Diyana Asyikin Saifuddin</li>
+       <li>• Aizatul Shairah Mat Nasir</li>
+       <li>• Lailatul Qadarina Rozikin</li>
+       <li>• Amirah Najihah Abdul Halim</li>
+       <li>• Naqibah Mohd Nasir</li>
+      </ul>
+     </div>
+    </div>
+   </div><!-- Footer -->
+   <footer class="text-center mt-1 py-0.5">
+    <p class="text-xs text-gray-600 font-semibold">✨ "Sihat, Cergas &amp; Berprestasi Tinggi" ✨</p>
+   </footer>
+  </div>
+  <script>
+        const defaultConfig = {
+            school_name: "SK ASSUNTA (2)",
+            year: "2026",
+            primary_color: "#ff6b6b",
+            secondary_color: "#4ecdc4",
+            text_color: "#1a1a2e",
+            background_color: "#ffecd2",
+            accent_color: "#ffd93d"
+        };
+
+        let config = { ...defaultConfig };
+
+        async function onConfigChange(cfg) {
+            config = { ...defaultConfig, ...cfg };
+            
+            // Update year badges
+            const yearBadge = document.getElementById('year-badge');
+            if (yearBadge) {
+                yearBadge.textContent = `📅 TAHUN ${config.year || defaultConfig.year}`;
+            }
+            
+            const yearBadgeUniform = document.getElementById('year-badge-uniform');
+            if (yearBadgeUniform) {
+                yearBadgeUniform.textContent = `📅 TAHUN ${config.year || defaultConfig.year}`;
+            }
+
+            const yearBadgeSukan = document.getElementById('year-badge-sukan');
+            if (yearBadgeSukan) {
+                yearBadgeSukan.textContent = `📅 TAHUN ${config.year || defaultConfig.year}`;
+            }
+            
+            // Update school badges
+            const schoolBadge = document.getElementById('school-badge');
+            if (schoolBadge) {
+                schoolBadge.textContent = `🏫 ${config.school_name || defaultConfig.school_name}`;
+            }
+
+            const schoolBadgeUniform = document.getElementById('school-badge-uniform');
+            if (schoolBadgeUniform) {
+                schoolBadgeUniform.textContent = `🏫 ${config.school_name || defaultConfig.school_name}`;
+            }
+
+            const schoolBadgeSukan = document.getElementById('school-badge-sukan');
+            if (schoolBadgeSukan) {
+                schoolBadgeSukan.textContent = `🏫 ${config.school_name || defaultConfig.school_name}`;
+            }
+
+            // Update menu school name
+            const menuSchoolName = document.getElementById('menu-school-name');
+            if (menuSchoolName) {
+                menuSchoolName.textContent = `${config.school_name || defaultConfig.school_name} - TAHUN ${config.year || defaultConfig.year}`;
+            }
+
+            // Update colors
+            const headerBoxes = document.querySelectorAll('.header-box');
+            headerBoxes.forEach(headerBox => {
+                headerBox.style.background = `linear-gradient(135deg, ${config.primary_color} 0%, ${adjustColor(config.primary_color, -20)} 100%)`;
+                headerBox.style.boxShadow = `8px 8px 0px ${config.secondary_color}, 12px 12px 0px ${config.text_color}`;
+            });
+
+            const containers = document.querySelectorAll('.a4-container');
+            containers.forEach(container => {
+                container.style.background = `linear-gradient(135deg, ${config.background_color} 0%, ${adjustColor(config.background_color, -10)} 50%, ${config.background_color} 100%)`;
+            });
+        }
+
+        function showSection(section) {
+            // Hide all sections
+            document.getElementById('main-menu').style.display = 'none';
+            document.getElementById('kelab-section').style.display = 'none';
+            document.getElementById('uniform-section').style.display = 'none';
+            document.getElementById('sukan-section').style.display = 'none';
+
+            // Show selected section
+            if (section === 'menu') {
+                document.getElementById('main-menu').style.display = 'flex';
+            } else if (section === 'kelab') {
+                document.getElementById('kelab-section').style.display = 'block';
+            } else if (section === 'uniform') {
+                document.getElementById('uniform-section').style.display = 'block';
+            } else if (section === 'sukan') {
+                document.getElementById('sukan-section').style.display = 'flex';
+            }
+        }
+
+        function adjustColor(hex, amount) {
+            const num = parseInt(hex.replace('#', ''), 16);
+            const r = Math.min(255, Math.max(0, (num >> 16) + amount));
+            const g = Math.min(255, Math.max(0, ((num >> 8) & 0x00FF) + amount));
+            const b = Math.min(255, Math.max(0, (num & 0x0000FF) + amount));
+            return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+        }
+
+        function mapToCapabilities(cfg) {
+            return {
+                recolorables: [
+                    {
+                        get: () => cfg.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            cfg.background_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.secondary_color || defaultConfig.secondary_color,
+                        set: (value) => {
+                            cfg.secondary_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            cfg.text_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            cfg.primary_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            cfg.accent_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: {
+                    get: () => cfg.font_family || 'Quicksand',
+                    set: (value) => {
+                        cfg.font_family = value;
+                        if (window.elementSdk) window.elementSdk.setConfig({ font_family: value });
+                    }
+                },
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(cfg) {
+            return new Map([
+                ["school_name", cfg.school_name || defaultConfig.school_name],
+                ["year", cfg.year || defaultConfig.year]
+            ]);
+        }
+
+        // Initialize SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        } else {
+            onConfigChange(defaultConfig);
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c58e04c7482c0c2',t:'MTc2OTY5MTI0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
