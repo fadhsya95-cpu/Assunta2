@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Organisasi Induk Kokurikulum SK Assunta (2) 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f0f9ff;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            padding: 8mm 10mm;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .title-font {
+            font-family: 'Fredoka', sans-serif;
+        }
+        .org-card {
+            border-radius: 10px;
+            padding: 4px 6px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1.5px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .role {
+            font-weight: 700;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+        .name {
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 1.1;
+        }
+        .sub-text {
+            font-size: 0.58rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Color Themes */
+        .pengerusi-bg { background-color: #ffedda; border-color: #f97316; color: #9a3412; }
+        .timbalan-bg { background-color: #dcfce7; border-color: #22c55e; color: #14532d; }
+        .naib-bg { background-color: #e0f2fe; border-color: #0ea5e9; color: #0c4a6e; }
+        .su-bg { background-color: #fef08a; border-color: #eab308; color: #713f12; }
+        .unit-bg { background-color: #f3e8ff; border-color: #a855f7; color: #581c87; }
+        .kelab-bg { background-color: #ffedd5; border-color: #f97316; color: #7c2d12; }
+        .sukan-bg { background-color: #d1fae5; border-color: #10b981; color: #064e3b; }
+        .rumah-header-bg { background-color: #3b82f6; border-color: #1d4ed8; color: white; }
+
+        .connector-v { width: 1.5px; background-color: #cbd5e1; margin: 0 auto; height: 8px; }
+        
+        @media print {
+            body { background: none; padding: 0; }
+            .a4-page { box-shadow: none; width: 210mm; height: 297mm; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a4-page">
+        <!-- Header: Reduced margin -->
+        <div class="text-center mb-2">
+            <h1 class="title-font text-xl font-bold text-blue-800 uppercase tracking-tight">Carta Organisasi Induk Kokurikulum</h1>
+            <h2 class="title-font text-lg font-semibold text-pink-600">SK Assunta (2) Tahun 2026</h2>
+            <div class="w-12 h-1 bg-blue-400 mx-auto mt-0.5 rounded-full"></div>
+        </div>
+
+        <!-- Pengerusi Section: Compacted -->
+        <div class="flex justify-center">
+            <div class="org-card pengerusi-bg w-56">
+                <div class="role">Pengerusi</div>
+                <div class="name">KUMUTHA YAHAMBARAM</div>
+                <div class="sub-text">Guru Besar</div>
+            </div>
+        </div>
+
+        <div class="connector-v"></div>
+        <div class="w-full h-px bg-gray-200 mx-auto max-w-2xl"></div>
+
+        <!-- Naib Pengerusi Line: Tighter grid -->
+        <div class="grid grid-cols-4 gap-2 px-1">
+            <div class="flex flex-col items-center">
+                <div class="connector-v"></div>
+                <div class="org-card naib-bg w-full">
+                    <div class="role">Naib Pengerusi II</div>
+                    <div class="name text-[0.7rem]">ROHAYA BINTI YAHYA</div>
+                    <div class="sub-text">PK Hal Ehwal Murid</div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="connector-v"></div>
+                <div class="org-card timbalan-bg w-full border-green-500 shadow-sm">
+                    <div class="role">Timbalan Pengerusi</div>
+                    <div class="name text-[0.7rem]">SELLAMANY A/P ARASEN</div>
+                    <div class="sub-text">PK Kokurikulum</div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="connector-v"></div>
+                <div class="org-card naib-bg w-full">
+                    <div class="role">Naib Pengerusi I</div>
+                    <div class="name text-[0.7rem]">ROSNANI BINTI MOHAMED</div>
+                    <div class="sub-text">PK Pentadbiran</div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="connector-v"></div>
+                <div class="org-card naib-bg w-full">
+                    <div class="role">Naib Pengerusi III</div>
+                    <div class="name text-[0.7rem]">INTAN SUHANA BINTI OTHMAWI</div>
+                    <div class="sub-text">PK Petang</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setiausaha Line: Reduced top margin -->
+        <div class="flex justify-center gap-8 mt-3">
+            <div class="org-card su-bg w-40">
+                <div class="role">Setiausaha Kokurikulum</div>
+                <div class="name">Thevika a/p Agilan</div>
+            </div>
+            <div class="org-card su-bg w-40">
+                <div class="role">Setiausaha Sukan</div>
+                <div class="name text-[0.7rem]">Ummi Shafa Fashihah binti Sairi</div>
+            </div>
+        </div>
+
+        <!-- Main Grid for Penyelaras & Ketua: Compacted spacing -->
+        <div class="grid grid-cols-3 gap-2 mt-4 px-1">
+            
+            <!-- Kolum 1: Unit Beruniform -->
+            <div class="space-y-1">
+                <div class="org-card unit-bg mb-1">
+                    <div class="role">Penyelaras Unit Beruniform</div>
+                    <div class="name text-[0.7rem]">Zamaleah binti Mat Som</div>
+                </div>
+                <div class="org-card bg-purple-50 border-purple-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua KRS</div>
+                    <div class="name text-[0.65rem]">Sharifah Izzati binti Syed Zainal</div>
+                </div>
+                <div class="org-card bg-purple-50 border-purple-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Pengakap</div>
+                    <div class="name text-[0.65rem]">Waraslina binti Abdul Wahab</div>
+                </div>
+                <div class="org-card bg-purple-50 border-purple-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Pandu Puteri Tunas</div>
+                    <div class="name text-[0.65rem]">Sujatha a/p Ramasamy</div>
+                </div>
+                <div class="org-card bg-purple-50 border-purple-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua BSMM</div>
+                    <div class="name text-[0.65rem]">Pavitra a/p Muraga</div>
+                </div>
+                <div class="org-card bg-purple-50 border-purple-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Puteri Islam</div>
+                    <div class="name text-[0.65rem]">Nik Fatimah Nadhirah</div>
+                </div>
+                <div class="org-card bg-purple-50 border-purple-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Tunas Pertahanan Awam</div>
+                    <div class="name text-[0.65rem]">Nur Aida Nabila binti K. Azli</div>
+                </div>
+            </div>
+
+            <!-- Kolum 2: Kelab & Persatuan -->
+            <div class="space-y-1">
+                <div class="org-card kelab-bg mb-1">
+                    <div class="role">Penyelaras Kelab Persatuan</div>
+                    <div class="name text-[0.7rem]">Norsyazwani binti Mohamed Isa</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Doktor Muda</div>
+                    <div class="name text-[0.65rem]">Asmidar binti Ahmad</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Bahasa Melayu</div>
+                    <div class="name text-[0.65rem]">Maisyarah binti Latif</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Bahasa Inggeris</div>
+                    <div class="name text-[0.65rem]">Siti Aisyah binti Md Zin</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Seni Teater</div>
+                    <div class="name text-[0.65rem]">Vimala a/p Thachanamurthy</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua STEM</div>
+                    <div class="name text-[0.65rem]">Mariam binti Omar</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua KPJ</div>
+                    <div class="name text-[0.65rem]">Vickneswary a/p Vadivelloo</div>
+                </div>
+                <div class="org-card bg-orange-50 border-orange-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Pendidikan Islam</div>
+                    <div class="name text-[0.65rem]">Siti Aliza binti Arifin</div>
+                </div>
+            </div>
+
+            <!-- Kolum 3: Sukan Permainan -->
+            <div class="space-y-1">
+                <div class="org-card sukan-bg mb-1">
+                    <div class="role">Penyelaras Sukan Permainan</div>
+                    <div class="name text-[0.7rem]">Kalai Selvi a/p Venggadasallam</div>
+                </div>
+                <div class="org-card bg-emerald-50 border-emerald-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Bola Jaring</div>
+                    <div class="name text-[0.65rem]">Nur Dini Nasuha binti C. Husin</div>
+                </div>
+                <div class="org-card bg-emerald-50 border-emerald-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Badminton</div>
+                    <div class="name text-[0.65rem]">Khairul Najwa binti M. Zamgi</div>
+                </div>
+                <div class="org-card bg-emerald-50 border-emerald-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Olahraga</div>
+                    <div class="name text-[0.65rem]">Shalini a/p Mogan</div>
+                </div>
+                <div class="org-card bg-emerald-50 border-emerald-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Bola Tampar</div>
+                    <div class="name text-[0.65rem]">Siti Arina binti Abdul Musa</div>
+                </div>
+                <div class="org-card bg-emerald-50 border-emerald-100 py-1">
+                    <div class="role text-[0.5rem]">Ketua Catur</div>
+                    <div class="name text-[0.65rem]">Siti Fatimah binti Mokhtar</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rumah Sukan: Moved up closer to content -->
+        <div class="mt-4">
+            <div class="flex justify-center items-center gap-3 mb-2">
+                <div class="h-px bg-gray-200 flex-grow"></div>
+                <div class="org-card rumah-header-bg py-1 px-4 rounded-full">
+                    <div class="font-bold text-[0.6rem] tracking-widest">UNIT RUMAH SUKAN</div>
+                </div>
+                <div class="h-px bg-gray-200 flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-4 gap-2 px-1">
+                <div class="bg-red-50 border-2 border-red-400 rounded-lg p-1.5 text-center shadow-sm">
+                    <div class="text-[0.6rem] font-black text-red-600 mb-0.5">ASSUNTA</div>
+                    <div class="text-[0.6rem] font-bold leading-tight">Hamizah binti Aziz Munir</div>
+                </div>
+                <div class="bg-blue-50 border-2 border-blue-400 rounded-lg p-1.5 text-center shadow-sm">
+                    <div class="text-[0.6rem] font-black text-blue-600 mb-0.5">CLARE</div>
+                    <div class="text-[0.6rem] font-bold leading-tight">Nurul Ubaidah Samsudin</div>
+                </div>
+                <div class="bg-green-50 border-2 border-green-400 rounded-lg p-1.5 text-center shadow-sm">
+                    <div class="text-[0.6rem] font-black text-green-600 mb-0.5">HERMINE</div>
+                    <div class="text-[0.6rem] font-bold leading-tight">Yuzaini Azura Mat Jusoh</div>
+                </div>
+                <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-1.5 text-center shadow-sm">
+                    <div class="text-[0.6rem] font-black text-yellow-600 mb-0.5">FRANCIS</div>
+                    <div class="text-[0.6rem] font-bold leading-tight">Raja Nur Nazihah Rahim</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer: Closer to the content -->
+        <div class="mt-4 flex justify-between items-center text-[8px] text-gray-400 border-t pt-1.5">
+            <div>SK ASSUNTA (2) • KOKURIKULUM 2026</div>
+            <div class="flex gap-2 items-center">
+                <span>Diperakui Sah oleh Pentadbiran Sekolah</span>
+                <div class="w-3 h-3 rounded-full bg-blue-100"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
