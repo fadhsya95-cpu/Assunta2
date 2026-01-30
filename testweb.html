@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ms">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Organisasi Guru Penasihat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ffecd2 100%);
+            --header-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+        }
+
+        body {
+            box-sizing: border-box;
+            background: #ffecd2;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        h1, h2, .title-font {
+            font-family: 'Fredoka One', cursive;
+        }
+
+        /* Container Responsif */
+        .app-container {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 1rem;
+            background: var(--bg-gradient);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Hiasan Latar Belakang */
+        .decor-star {
+            position: absolute;
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header-box {
+            background: var(--header-gradient);
+            border: 3px solid #1a1a2e;
+            box-shadow: 4px 4px 0px #4ecdc4, 6px 6px 0px #1a1a2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .club-card {
+            background: white;
+            border: 3px solid #1a1a2e;
+            box-shadow: 5px 5px 0px #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .club-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            border-bottom: 3px solid #1a1a2e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 10px;
+            flex-grow: 1;
+        }
+
+        .list-names {
+            font-size: 0.75rem;
+            line-height: 1.4;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .ketua-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 8px;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            border: 2px solid #1a1a2e;
+            font-weight: 700;
+            font-size: 0.75rem;
+            background: white;
+        }
+
+        /* Menu Styles */
+        .menu-card {
+            border: 4px solid #1a1a2e;
+            border-radius: 24px;
+            padding: 30px 20px;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 6px 6px 0px #1a1a2e;
+            width: 100%;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.03);
+            box-shadow: 10px 10px 0px #1a1a2e;
+        }
+
+        .back-button {
+            background: #1a1a2e;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* PRINT OPTIMIZATION */
+        @media print {
+            @page { size: A4 landscape; margin: 10mm; }
+            .no-print { display: none !important; }
+            body { background: white !important; }
+            .app-container { background: white !important; padding: 0 !important; }
+            .grid { gap: 10px !important; }
+            .club-card { break-inside: avoid; border-width: 2px !important; }
+        }
+    </style>
+ </head>
+ <body>
+
+  <!-- Dekorasi -->
+  <div class="decor-star top-10 left-10 text-4xl">⭐</div>
+  <div class="decor-star bottom-10 right-10 text-4xl">✨</div>
+
+  <!-- MENU UTAMA -->
+  <div id="main-menu" class="app-container flex flex-col items-center justify-center p-6">
+    <div class="text-center max-w-4xl w-full">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4 tracking-tight">🎓 SISTEM KOKURIKULUM</h1>
+        <p class="text-xl md:text-2xl text-gray-700 mb-12 font-bold bg-white/50 inline-block px-6 py-2 rounded-full border-2 border-black">SK ASSUNTA (2) - 2026</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <button onclick="showSection('uniform')" class="menu-card bg-blue-500 text-white">
+                <div class="text-5xl mb-4">🎖️</div>
+                <h2 class="text-2xl font-black mb-2">UNIT UNIFORM</h2>
+                <p class="text-sm font-bold opacity-90">Pengakap, PBSM, TKRS, dll</p>
+            </button>
+            <button onclick="showSection('kelab')" class="menu-card bg-purple-500 text-white">
+                <div class="text-5xl mb-4">🎭</div>
+                <h2 class="text-2xl font-black mb-2">KELAB & PERSATUAN</h2>
+                <p class="text-sm font-bold opacity-90">Bahasa, STEM, Agama, dll</p>
+            </button>
+            <button onclick="showSection('sukan')" class="menu-card bg-green-500 text-white">
+                <div class="text-5xl mb-4">⚽</div>
+                <h2 class="text-2xl font-black mb-2">SUKAN & PERMAINAN</h2>
+                <p class="text-sm font-bold opacity-90">Badminton, Bola Jaring, dll</p>
+            </button>
+			
+			<button onclick="window.location.href='https://fadhsya95-cpu.github.io/Assunta2/takwim6.html'" class="menu-card bg-blue-500 text-white">
+                <div class="text-5xl mb-4">🎖️</div>
+                <h2 class="text-2xl font-black mb-2">TEST TAKWIM</h2>
+                <p class="text-sm font-bold opacity-90">TAKWIM SEKOLAH ASSUNTA 2</p>
+            </button>
+            <button onclick="window.location.href='https://fadhsya95-cpu.github.io/Assunta2/IndukKo.html'" class="menu-card bg-purple-500 text-white">
+                <div class="text-5xl mb-4">🎭</div>
+                <h2 class="text-2xl font-black mb-2">TEST & CARTA</h2>
+                <p class="text-sm font-bold opacity-90">CARTA ORGANISASI</p>
+            </button>
+			
+        </div>
+        
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+             <button onclick="window.location.href='https://fadhsya95-cpu.github.io/Assunta2/takwim6.html'" class="px-6 py-3 bg-white border-4 border-black font-black rounded-xl shadow-[4px_4px_0px_black] hover:translate-y-1 hover:shadow-none transition-all">TAKWIM 2026</button>
+             <button onclick="window.location.href='https://fadhsya95-cpu.github.io/Assunta2/IndukKo.html'" class="px-6 py-3 bg-yellow-400 border-4 border-black font-black rounded-xl shadow-[4px_4px_0px_black] hover:translate-y-1 hover:shadow-none transition-all">CARTA INDUK</button>
+        </div>
+    </div>
+  </div>
+
+  <!-- SECTIONS CONTAINER -->
+  <div id="content-area" class="hidden app-container">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="flex justify-between items-center no-print mb-4">
+            <button onclick="showSection('menu')" class="back-button">← BALIK</button>
+            <button onclick="window.print()" class="bg-white border-2 border-black px-4 py-2 rounded-lg font-bold shadow-[3px_3px_0px_black]">🖨️ CETAK</button>
+        </div>
+
+        <header class="header-box text-white text-center">
+            <h1 id="section-title" class="text-xl md:text-3xl font-black uppercase mb-3">KATEGORI</h1>
+            <div class="flex justify-center gap-3">
+                <span class="badge">📅 2026</span>
+                <span class="badge">🏫 SK ASSUNTA (2)</span>
+            </div>
+        </header>
+
+        <!-- KELAB GRID -->
+        <div id="grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <!-- Data akan diisi secara dinamik oleh JS atau kekal statik -->
+        </div>
+
+        <footer class="text-center mt-10 pb-10">
+            <p class="text-sm font-bold text-gray-600">✨ Bersama Membentuk Generasi Cemerlang ✨</p>
+        </footer>
+    </div>
+  </div>
+
+  <script>
+    const dataGuru = {
+        uniform: {
+            title: "🎖️ GURU PENASIHAT UNIT UNIFORM",
+            color: "blue",
+            items: [
+                { name: "TKRS", ketua: "Sharifah Izzati Syed Zainol", ahli: ["Aisyah Ahmadi", "Sapinah Abdullah", "Syasya Fakhira", "Vanajadevi", "Nur Aniesha", "Shalini", "Nurul Ain", "Khairul Najwa", "Asmidar", "Siti Aishah"] },
+                { name: "PPIM", ketua: "Nik Fatimah Nadhirah", ahli: ["Siti Aliza", "Hamizah Aziz", "Nurul Ubaidah", "Siti Fatimah", "Wan Norshahira", "Hayati", "Nor Diyana", "Norafiza", "Norsyazwani"] },
+                { name: "PENGAKAP", ketua: "Waraslina Abdul Wahab", ahli: ["Sumathy", "Ummi Shafa", "Devii", "Vimala", "Raja Nur Nazihah", "Ain Farina", "Asmaa'", "Lailatul Qadarina", "Noorsyazwani", "Nur Ain Najwa"] }
+            ]
+        },
+        kelab: {
+            title: "🎭 GURU PENASIHAT KELAB & PERSATUAN",
+            color: "purple",
+            items: [
+                { name: "Bahasa Melayu", ketua: "Maisyarah Latif", ahli: ["Nur Sakinah", "Wan Norshahira", "Rini Rosmin", "Nor Izzah", "Ummi Shafa", "Noorsyazwani", "Nurul Ain", "Naqibah", "Nurul Izzah"] },
+                { name: "English Club", ketua: "Siti Aisyah Md Zin", ahli: ["Priyaa", "Harvinder Kaur", "Nur Aniesha", "Sumathy", "Nur Aida Nabila", "Logambigai", "Ain Farina", "Mercy Linda"] },
+                { name: "STEM", ketua: "Mariam Omar", ahli: ["Vanajadevi", "Ravina", "Sapinah", "Sharifah Izzati", "Kalai Selvi", "Asmaa'", "Sujatha", "Hayati"] }
+            ]
+        },
+        sukan: {
+            title: "⚽ GURU PENASIHAT SUKAN & PERMAINAN",
+            color: "green",
+            items: [
+                { name: "Bola Jaring", ketua: "Nur Dini Nasrihah", ahli: ["Sumathy", "Nur Aniesha", "Damia Nazurah", "Nor Izzah", "Ummi Shafa", "Annisa Saffieyya", "Mariam Omar", "Ain Farina", "Pavithra"] },
+                { name: "Badminton", ketua: "Khairul Najwa", ahli: ["Siti Aliza", "Devii", "Nuruljannah", "Vanajadevi", "Nur Sakinah", "Darshini", "Magdeline", "Nurul Izzah", "Zameleah"] },
+                { name: "Olahraga", ketua: "Shalini a/p Mogan", ahli: ["Vickneswari", "Siti Norisah", "Syasya Fakirah", "Harvinder Kaur", "Nik Fatimah", "Sapinah", "Asmidar", "Naqibah"] }
+            ]
+        }
+    };
+
+    function showSection(type) {
+        const mainMenu = document.getElementById('main-menu');
+        const contentArea = document.getElementById('content-area');
+        const grid = document.getElementById('grid-container');
+        const title = document.getElementById('section-title');
+
+        if (type === 'menu') {
+            mainMenu.classList.remove('hidden');
+            contentArea.classList.add('hidden');
+            return;
+        }
+
+        mainMenu.classList.add('hidden');
+        contentArea.classList.remove('hidden');
+        
+        const data = dataGuru[type];
+        title.innerText = data.title;
+        
+        grid.innerHTML = '';
+        data.items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'club-card';
+            card.innerHTML = `
+                <div class="card-header bg-${data.color}-100">
+                    <h2 class="font-black text-sm uppercase text-${data.color}-800">${item.name}</h2>
+                </div>
+                <div class="card-body">
+                    <span class="ketua-badge bg-${data.color}-600 text-white">👑 KETUA: ${item.ketua}</span>
+                    <ul class="list-names">
+                        ${item.ahli.map(nama => `<li>• ${nama}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+ </body>
+</html>
